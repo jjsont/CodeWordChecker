@@ -15,13 +15,18 @@ public class CodeWordChecker implements StringChecker {
         this.kWord = kWord;
     }
 
-    public boolean isValid(String str) {
-        boolean isValid = true;
-        if (str.length() <= this.max && str.length() >= this.min && str.indexOf(this.kWord) != -1) {
-            isValid = true;
-        }
-        else {
-            isValid= false;
+    public boolean isValid(String str)
+    {
+        boolean isValid=true;
+
+        if(str.length()<=this.max && str.length()>= this.min)
+        {
+            if (str.indexOf(this.kWord)>=0)
+            {
+                isValid=false;
+            }
+        }else{
+            isValid=false;
         }
         return isValid;
     }
