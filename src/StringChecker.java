@@ -1,3 +1,3 @@
 public interface StringChecker {
-    boolean isValue(String str);
+    boolean isValid(String str);
 }
